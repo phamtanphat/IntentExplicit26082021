@@ -44,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
         mBinding.buttonObjectParcelable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ArrayList<Person> list = new ArrayList<>();
                 Person person = new Person("Nguyễn Văn A");
+                list.add(person);
                 Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-                intent.putExtra("person",person);
+                intent.putExtra("list",list);
                 startActivity(intent);
             }
         });

@@ -30,10 +30,23 @@ public class MainActivity2 extends AppCompatActivity {
 //        }
 
 //        3 : Lấy dữ liệu dạng list object
+//        Intent intent = getIntent();
+//        if (intent != null){
+//            ArrayList<Animal> list = (ArrayList<Animal>) intent.getSerializableExtra("list");
+//            Log.d("BBB",list.get(0).name);
+//        }
+
+//        4 : Lấy dữ liệu object thông qua parcel
+//        Intent intent = getIntent();
+//        if (intent != null) {
+//            Person person = intent.getParcelableExtra("person");
+//            Log.d("BBB", person.name);
+//        }
+//        5 : Lấy dữ liệu dạng list object qua parcel
         Intent intent = getIntent();
-        if (intent != null){
-            ArrayList<Animal> list = (ArrayList<Animal>) intent.getSerializableExtra("list");
-            Log.d("BBB",list.get(0).name);
+        if (intent != null) {
+            ArrayList<Person> list = intent.getParcelableArrayListExtra("list");
+            Log.d("BBB", list.size() + "");
         }
     }
 }
